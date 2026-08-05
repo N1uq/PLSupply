@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PL Supply | Fornecedor de Camisas Premium</title>
+    <meta name="description"
+        content="Camisas Premium para Todo o Brasil. Qualidade excepcional, preço justo e atendimento direto pelo WhatsApp.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" data-route="home">
+                <span class="logo-text">PL Supply</span>
+            </a>
+            <div class="nav-right" style="display: flex; align-items: center; gap: 1rem;">
+                <a href="#" data-route="cart" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-text">Carrinho</span> <span class="cart-badge" id="cart-badge">0</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Abrir Menu"><i class="fas fa-bars"></i></button>
+            </div>
+            <nav class="nav-links">
+                <a href="#" data-route="home" class="active">Início</a>
+                <a href="#" data-route="catalog">Catálogo</a>
+                <a href="#" data-route="how-to-buy">Como Comprar</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app-content">
+        <!-- SEÇÃO: INÍCIO -->
+        <section id="home-section" class="page-section active">
+            <div class="hero">
+                <div class="container hero-content">
+                    <h1 class="hero-title">Camisas Premium para Todo o Brasil</h1>
+                    <p class="hero-subtitle">Qualidade excepcional, preço justo e atendimento direto pelo WhatsApp.</p>
+                    <a href="#" class="btn btn-primary btn-large" data-route="catalog">VER CATÁLOGO</a>
+                </div>
+            </div>
+
+            <div class="differentials">
+                <div class="container differentials-grid">
+                    <div class="diff-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>Qualidade Premium</h3>
+                    </div>
+                    <div class="diff-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Atendimento rápido</h3>
+                    </div>
+                    <div class="diff-card">
+                        <i class="fas fa-truck-fast"></i>
+                        <h3>Envio para todo Brasil</h3>
+                    </div>
+                    <div class="diff-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Compra simples e segura</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-preview">
+                <div class="container">
+                    <h2 class="section-title">Produtos em Destaque</h2>
+                    <div id="featured-grid" class="products-grid">
+                        <!-- Renderizado via JS -->
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn-secondary" data-route="catalog">VER TODOS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CATÁLOGO -->
+        <section id="catalog-section" class="page-section">
+            <div class="container">
+                <h1 class="section-title">Nosso Catálogo</h1>
+
+                <div class="catalog-controls">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Pesquisar por nome ou código...">
+                    </div>
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="Clubes Brasileiros">Clubes Brasileiros</button>
+                        <button class="filter-btn" data-filter="Clubes Europeus">Clubes Europeus</button>
+                        <button class="filter-btn" data-filter="Seleções">Seleções</button>
+                        <button class="filter-btn" data-filter="Lançamentos">Lançamentos</button>
+                        <button class="filter-btn" data-filter="Promoções">Promoções</button>
+                    </div>
+                </div>
+
+                <div id="catalog-grid" class="products-grid">
+                    <!-- Renderizado via JS -->
+                </div>
+
+                <div class="custom-order-banner">
+                    <div class="custom-order-content">
+                        <h2>Não encontrou a camisa que procurava?</h2>
+                        <p>Temos centenas de outros modelos! Nos diga qual camisa deseja e nós verificamos a
+                            disponibilidade para você na mesma hora.</p>
+                        <div class="custom-order-form">
+                            <input type="text" id="custom-shirt-name" placeholder="Ex: Camisa do Arsenal Home 2024">
+                            <button class="btn btn-whatsapp" id="btn-custom-order">
+                                <i class="fab fa-whatsapp"></i> Consultar Disponibilidade
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: COMO COMPRAR -->
+        <section id="how-to-buy-section" class="page-section">
+            <div class="container">
+                <h1 class="section-title">Como Comprar</h1>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Escolha as camisas</h3>
+                        <p>Navegue pelo nosso catálogo e escolha seus modelos favoritos.</p>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Adicione ao carrinho</h3>
+                        <p>Selecione o tamanho desejado e adicione ao carrinho.</p>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Finalize pelo WhatsApp</h3>
+                        <p>No carrinho, clique em finalizar e seu pedido será enviado para nós.</p>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Receba seu pedido</h3>
+                        <p>Combinaremos o pagamento e envio diretamente com você!</p>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-primary" data-route="catalog">IR PARA O CATÁLOGO</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CARRINHO -->
+        <section id="cart-section" class="page-section">
+            <div class="container">
+                <h1 class="section-title">Seu Carrinho</h1>
+                <div class="cart-container">
+                    <div class="cart-items" id="cart-items-container">
+                        <!-- Itens do carrinho renderizados via JS -->
+                        <div class="empty-cart-message">
+                            Seu carrinho está vazio. <br><br>
+                            <a href="#" class="btn btn-primary" data-route="catalog">Voltar às compras</a>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary" id="cart-summary-container" style="display: none;">
+                        <h3>Resumo do Pedido</h3>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="cart-subtotal">R$ 0,00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Frete fixo</span>
+                                <span id="cart-frete">R$ 9,90</span>
+                            </div>
+                            <div class="summary-row total-row">
+                                <span>Total</span>
+                                <span id="cart-total">R$ 0,00</span>
+                            </div>
+                        </div>
+
+                        <div class="checkout-form">
+                            <input type="text" id="checkout-nome" placeholder="Seu Nome Completo" required>
+                            <input type="text" id="checkout-cidade" placeholder="Cidade / Estado" required>
+                            <select id="checkout-pagamento" required>
+                                <option value="" disabled selected>Forma de pagamento</option>
+                                <option value="PIX">PIX</option>
+                                <option value="Cartão">Cartão</option>
+                                <option value="Boleto">Boleto</option>
+                            </select>
+                        </div>
+
+                        <div id="pix-info" class="pix-info-box" style="display: none;">
+                            <h4>Pague via PIX (Chave Aleatória)</h4>
+                            <div class="pix-key">b7002388-c660-4316-b5ee-938c9e561783</div>
+                            <p><strong>Banco:</strong> Efí bank<br><strong>Nome:</strong> Joaquim Pereira</p>
+                            <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">Após realizar o
+                                pagamento, clique no botão abaixo para enviar o pedido e o comprovante pelo WhatsApp.
+                            </p>
+                        </div>
+
+                        <button class="btn btn-whatsapp btn-large w-100" id="btn-finalize">
+                            <i class="fab fa-whatsapp"></i> FINALIZAR PELO WHATSAPP
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>PL Supply</h3>
+                <p>Fornecedor de Camisas Premium.</p>
+                <p>Qualidade e preço justo para todo o Brasil.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p><i class="fab fa-whatsapp"></i> (85) 99252-8809</p>
+                <p><i class="fab fa-instagram"></i> @plsupply</p>
+                <p><i class="fas fa-envelope"></i> plsupply@gmail.com</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Atendimento</h4>
+                <p>Segunda a Sexta: 09h às 18h</p>
+                <p>Sábado: 09h às 13h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PL Supply. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
